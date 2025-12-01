@@ -1,4 +1,11 @@
-## ProjectBTP: Local LLM & OCR Assistant
+## Btech Project of Semester 3 
+
+### Contributors
+
+- **Umang Khatri** — 2403AI03  
+- **Shivang Karthikey** — 2403AI02  
+- **Gagan Yadav** — 2403AI05  
+
 
 ### Overview
 
@@ -104,10 +111,4 @@ Before running the application, make sure you have:
 
 ---
 
-### Contributors
 
-- **Umang Khatri** — 2403AI03  
-- **Shivang Karthikey** — 2403AI02  
-- **Gagan Yadav** — 2403AI05  
-
----
