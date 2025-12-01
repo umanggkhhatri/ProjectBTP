@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Local LLM + OCR Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Local LLM + OCR Assistant</h1>
+    <p class="subtitle">Type your message, optionally upload an image, and get a response.</p>
+
+    <form method="POST" enctype="multipart/form-data" class="form-card">
+      <label>Your message</label>
+      <textarea name="text" placeholder="Ask anything..."></textarea>
+
+      <label>Upload image (optional)</label>
+      <input type="file" name="image" accept="image/*" />
+
+      <label>Model name</label>
+      <input type="text" name="model" placeholder="gpt2" />
+
+      <button type="submit" class="submit-btn">Generate</button>
+    </form>
+
+    <div class="output-section">
+
+      {% if error %}
+      <div class="card error">
+        <h3>Error</h3>
+        <p>{{ error }}</p>
+      </div>
+      {% endif %}
+
+      {% if ocr_text %}
+      <div class="card">
+        <h3>Extracted Text (OCR)</h3>
+        <pre>{{ ocr_text }}</pre>
+      </div>
+      {% endif %}
+
+      {% if reply %}
+      <div class="card">
+        <h3>Assistant Reply</h3>
+        <pre>{{ reply }}</pre>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</body>
+</html>
